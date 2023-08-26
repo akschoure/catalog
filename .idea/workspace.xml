@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="" />
+    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CatalogServiceApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/CatalogServiceApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +24,12 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,11 +51,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Learning/Unit Testing/catalogservice",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Git Repositories/Other Repos/catalog/pom.xml",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -51,6 +67,12 @@
       <recent name="D:\Learning\Unit Testing\catalogservice\src\main\java\com\gg\mm\catalogservice\service" />
       <recent name="D:\Learning\Unit Testing\catalogservice\src\main\java\com\gg\mm\catalogservice\models\discount" />
       <recent name="D:\m1\customerservice" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gg.mm.catalogservice.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gg.mm.catalogservice.constant" />
@@ -64,7 +86,7 @@
       <command value="mvn clean verify sonar:sonar \   -Dsonar.projectKey=customerservice \   -Dsonar.projectName='customerservice' \   -Dsonar.host.url=http://localhost:9095 \   -Dsonar.token=sqp_f6872a32c1b2fb429f5063ff0ca52eebde6feee4" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CatalogServiceApplication">
+  <component name="RunManager" selected="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray">
     <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="customerservice" />
       <extension name="coverage">
@@ -80,10 +102,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
+      <option name="METHOD_NAME" value="createSimoDiscountInfo_EmptyArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.CatalogServiceApplication" />
+      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
       <item itemvalue="JUnit.CustomerServiceTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="CatalogServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\jdk-17.0.7_windows-x64_bin\jdk-17.0.7" />
+    <option name="ALTERNATIVE_JRE_PATH" value="Eclipse Temurin 17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.CatalogServiceApplication" />
     <module name="catalogservice" />

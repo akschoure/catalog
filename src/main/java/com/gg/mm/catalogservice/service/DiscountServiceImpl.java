@@ -24,7 +24,7 @@ import static com.gg.mm.catalogservice.constant.CatalogConstant.*;
 
 @Service
 @Transactional
-public class DiscountServiceImpl implements DiscountService{
+public class DiscountServiceImpl implements DiscountService {
 
     private static final Logger log = LoggerFactory.getLogger(DiscountServiceImpl.class);
 
@@ -39,175 +39,13 @@ public class DiscountServiceImpl implements DiscountService{
 
     @Override
     public PromotionalInfo createSimoDiscountInfo(DiscountMatrixRootObject[] discountMatrixRootObjects) throws JsonProcessingException, ParseException {
-        ObjectMapper objectMapper = new ObjectMapper();
-       //All----------------------------------------------------------------------------------------------->
-
         ArrayList<PromotionalProductType> billPlanpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> vaspromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> otherpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> allpromotionalProductTypeArrayList = new ArrayList<>();
-
-
-        //promotionalCustomerTypeAll
-        PromotionalCustomerType promotionalCustomerTypeAll = new PromotionalCustomerType(); //billplan vas other all
-        promotionalCustomerTypeAll.setProductTypeBillPlan(billPlanpromotionalProductTypeArrayList); //billplan
-        promotionalCustomerTypeAll.setProductTypeVas(vaspromotionalProductTypeArrayList);
-        promotionalCustomerTypeAll.setProductTypeOthers(otherpromotionalProductTypeArrayList);
-        promotionalCustomerTypeAll.setProductTypeAll(allpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSilver
-        PromotionalCustomerType promotionalCustomerTypeSilver = new PromotionalCustomerType(); //billplan vas other all
-        promotionalCustomerTypeSilver.setProductTypeBillPlan(billPlanpromotionalProductTypeArrayList); //billplan
-        promotionalCustomerTypeSilver.setProductTypeVas(vaspromotionalProductTypeArrayList);
-        promotionalCustomerTypeSilver.setProductTypeOthers(otherpromotionalProductTypeArrayList);
-        promotionalCustomerTypeSilver.setProductTypeAll(allpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSafra
-        PromotionalCustomerType promotionalCustomerTypeSafra = new PromotionalCustomerType(); //billplan vas other all
-        promotionalCustomerTypeSafra.setProductTypeBillPlan(billPlanpromotionalProductTypeArrayList); //billplan
-        promotionalCustomerTypeSafra.setProductTypeVas(vaspromotionalProductTypeArrayList);
-        promotionalCustomerTypeSafra.setProductTypeOthers(otherpromotionalProductTypeArrayList);
-        promotionalCustomerTypeSafra.setProductTypeAll(allpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeCori
-        PromotionalCustomerType promotionalCustomerTypeCori = new PromotionalCustomerType(); //billplan vas other all
-        promotionalCustomerTypeCori.setProductTypeBillPlan(billPlanpromotionalProductTypeArrayList); //billplan
-        promotionalCustomerTypeCori.setProductTypeVas(vaspromotionalProductTypeArrayList);
-        promotionalCustomerTypeCori.setProductTypeOthers(otherpromotionalProductTypeArrayList);
-        promotionalCustomerTypeCori.setProductTypeAll(allpromotionalProductTypeArrayList);
-
-        //New
+        PromotionalCustomerType promotionalCustomerTypeAll = new PromotionalCustomerType();
+        promotionalCustomerTypeAll.setProductTypeBillPlan(billPlanpromotionalProductTypeArrayList);
         PromotionalOrderType promotionalOrderTypeNew = new PromotionalOrderType();
-
-        //All
         promotionalOrderTypeNew.setCustomerTypeAll(promotionalCustomerTypeAll);
-
-        //Silver
-        promotionalOrderTypeNew.setCustomerTypeSilver(promotionalCustomerTypeSilver); //consumer
-
-        //Safra
-        promotionalOrderTypeNew.setCustomerTypeSafra(promotionalCustomerTypeSafra);
-
-        //Cori
-        promotionalOrderTypeNew.setCustomerTypeCori(promotionalCustomerTypeCori);
-
-
-
-        //FOR PORT-IN----------------------------------------------------------------------------------------------->
-
-        ArrayList<PromotionalProductType> portInbillPlanpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> portInvaspromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> portInotherpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> portInallpromotionalProductTypeArrayList = new ArrayList<>();
-
-        //promotionalCustomerTypeAll
-        PromotionalCustomerType portInpromotionalCustomerTypeAll = new PromotionalCustomerType(); //billplan vas other all
-        portInpromotionalCustomerTypeAll.setProductTypeBillPlan(portInbillPlanpromotionalProductTypeArrayList); //billplan
-        portInpromotionalCustomerTypeAll.setProductTypeVas(portInvaspromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeAll.setProductTypeOthers(portInotherpromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeAll.setProductTypeAll(portInallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSilver
-        PromotionalCustomerType portInpromotionalCustomerTypeSilver = new PromotionalCustomerType(); //billplan vas other all
-        portInpromotionalCustomerTypeSilver.setProductTypeBillPlan(portInbillPlanpromotionalProductTypeArrayList); //billplan
-        portInpromotionalCustomerTypeSilver.setProductTypeVas(portInvaspromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeSilver.setProductTypeOthers(portInotherpromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeSilver.setProductTypeAll(portInallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSafra
-        PromotionalCustomerType portInpromotionalCustomerTypeSafra = new PromotionalCustomerType(); //billplan vas other all
-        portInpromotionalCustomerTypeSafra.setProductTypeBillPlan(portInbillPlanpromotionalProductTypeArrayList); //billplan
-        portInpromotionalCustomerTypeSafra.setProductTypeVas(portInvaspromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeSafra.setProductTypeOthers(portInotherpromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeSafra.setProductTypeAll(portInallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeCori
-        PromotionalCustomerType portInpromotionalCustomerTypeCori = new PromotionalCustomerType(); //billplan vas other all
-        portInpromotionalCustomerTypeCori.setProductTypeBillPlan(portInbillPlanpromotionalProductTypeArrayList); //billplan
-        portInpromotionalCustomerTypeCori.setProductTypeVas(portInvaspromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeCori.setProductTypeOthers(portInotherpromotionalProductTypeArrayList);
-        portInpromotionalCustomerTypeCori.setProductTypeAll(portInallpromotionalProductTypeArrayList);
-
-        //Port In
-        PromotionalOrderType promotionalOrderTypePortIn = new PromotionalOrderType();
-
-        //All
-        promotionalOrderTypePortIn.setCustomerTypeAll(portInpromotionalCustomerTypeAll);
-
-        //Silver
-        promotionalOrderTypePortIn.setCustomerTypeSilver(portInpromotionalCustomerTypeSilver); //consumer
-
-        //Safra
-        promotionalOrderTypePortIn.setCustomerTypeSafra(portInpromotionalCustomerTypeSafra);
-
-        //Cori
-        promotionalOrderTypePortIn.setCustomerTypeCori(portInpromotionalCustomerTypeCori);
-
-
-
-        //FOR Re-Contract ----------------------------------------------------------------------------------------------->
-
-        ArrayList<PromotionalProductType> reContractbillPlanpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> reContractvaspromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> reContractotherpromotionalProductTypeArrayList = new ArrayList<>();
-        ArrayList<PromotionalProductType> reContractallpromotionalProductTypeArrayList = new ArrayList<>();
-
-
-        //promotionalCustomerTypeAll
-        PromotionalCustomerType reContractpromotionalCustomerTypeAll = new PromotionalCustomerType(); //billplan vas other all
-        reContractpromotionalCustomerTypeAll.setProductTypeBillPlan(reContractbillPlanpromotionalProductTypeArrayList); //billplan
-        reContractpromotionalCustomerTypeAll.setProductTypeVas(reContractvaspromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeAll.setProductTypeOthers(reContractotherpromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeAll.setProductTypeAll(reContractallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSilver
-        PromotionalCustomerType reContractpromotionalCustomerTypeSilver = new PromotionalCustomerType(); //billplan vas other all
-        reContractpromotionalCustomerTypeSilver.setProductTypeBillPlan(reContractbillPlanpromotionalProductTypeArrayList); //billplan
-        reContractpromotionalCustomerTypeSilver.setProductTypeVas(reContractvaspromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeSilver.setProductTypeOthers(reContractotherpromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeSilver.setProductTypeAll(reContractallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeSafra
-        PromotionalCustomerType reContractpromotionalCustomerTypeSafra = new PromotionalCustomerType(); //billplan vas other all
-        reContractpromotionalCustomerTypeSafra.setProductTypeBillPlan(reContractbillPlanpromotionalProductTypeArrayList); //billplan
-        reContractpromotionalCustomerTypeSafra.setProductTypeVas(reContractvaspromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeSafra.setProductTypeOthers(reContractotherpromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeSafra.setProductTypeAll(reContractallpromotionalProductTypeArrayList);
-
-        //promotionalCustomerTypeCori
-        PromotionalCustomerType reContractpromotionalCustomerTypeCori = new PromotionalCustomerType(); //billplan vas other all
-        reContractpromotionalCustomerTypeCori.setProductTypeBillPlan(reContractbillPlanpromotionalProductTypeArrayList); //billplan
-        reContractpromotionalCustomerTypeCori.setProductTypeVas(reContractvaspromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeCori.setProductTypeOthers(reContractotherpromotionalProductTypeArrayList);
-        reContractpromotionalCustomerTypeCori.setProductTypeAll(reContractallpromotionalProductTypeArrayList);
-
-        //New
-        PromotionalOrderType promotionalOrderTypeReContract = new PromotionalOrderType();
-
-        //All
-        promotionalOrderTypeReContract.setCustomerTypeAll(reContractpromotionalCustomerTypeAll);
-
-        //Silver
-        promotionalOrderTypeReContract.setCustomerTypeSilver(reContractpromotionalCustomerTypeSilver); //consumer
-
-        //Safra
-        promotionalOrderTypeReContract.setCustomerTypeSafra(reContractpromotionalCustomerTypeSafra);
-
-        //Cori
-        promotionalOrderTypeReContract.setCustomerTypeCori(reContractpromotionalCustomerTypeCori);
-
-
-
-
-        //All NewLine PortIn ReContract
         PromotionalInfo promotionalInfo = new PromotionalInfo();
-
-        promotionalInfo.setOrderTypeNewLine(promotionalOrderTypeNew); // NewLine
-
-        promotionalInfo.setOrderTypePortIn(promotionalOrderTypePortIn); //PortIn
-
-        promotionalInfo.setOrderTypeReContract(promotionalOrderTypeReContract); //Re-contract
-
+        promotionalInfo.setOrderTypeNewLine(promotionalOrderTypeNew);
 
         for(DiscountMatrixRootObject discountMatrixRootObject : discountMatrixRootObjects ){
 
@@ -223,15 +61,6 @@ public class DiscountServiceImpl implements DiscountService{
                         if (discountMatrixRootObject.getInputData().getProductType() != null
                                 && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
                             billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            vaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            otherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            allpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
                         }
 
                     }
@@ -241,215 +70,13 @@ public class DiscountServiceImpl implements DiscountService{
                         if (discountMatrixRootObject.getInputData().getProductType() != null
                                 && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
                             billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            vaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            otherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            allpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
                         }
 
                     }
-                    else if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(SAFRA)) {
-                        log.info(SAFRA);
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            vaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            otherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            allpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                    }
-                    else if (discountMatrixRootObject.getInputData().getCondition() != null && (discountMatrixRootObject.getInputData().getCondition().equals(CORI)||discountMatrixRootObject.getInputData().getCondition().equals(BUSINESS_SIM))) {
-                        log.info(CORI,BUSINESS_SIM);
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            vaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            otherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            allpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                    }
-
-                }
-                if ((discountMatrixRootObject.getInputData().getOrderType().equals(ALL_ORDER_TYPE) || discountMatrixRootObject.getInputData().getOrderType().contains(PORT_IN))) {
-                    log.info(PORT_IN);
-
-                    if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(ALL_CUSTOMER)) {
-                        log.info("All Customer Type");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            portInbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            portInvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            portInotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            portInallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
-                    } else if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(SILVER)) {
-
-                        log.info("Silver");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            portInbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            portInvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            portInotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            portInallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
-                    } else if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(SAFRA)) {
-
-                        log.info("SAFRA");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            portInbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-
-                        }
-                        else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            portInvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            portInotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            portInallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                        }
-                    else if (discountMatrixRootObject.getInputData().getCondition() != null && (discountMatrixRootObject.getInputData().getCondition().equals(CORI)||discountMatrixRootObject.getInputData().getCondition().equals(BUSINESS_SIM))) {
-
-                        log.info("CORI");
-
-                        if (discountMatrixRootObject.getInputData().getCondition() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN) ) {
-                            portInbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            portInvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            portInotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            portInallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                    }
-                }
-                if ((discountMatrixRootObject.getInputData().getOrderType().equals(ALL_ORDER_TYPE) || discountMatrixRootObject.getInputData().getOrderType().contains(RE_CONTRACT))) {
-                    log.info(RE_CONTRACT);
-
-                    if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(ALL_CUSTOMER)) {
-                        log.info("All Type");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            reContractbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            reContractvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            reContractotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            reContractallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
-                    } else if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(SILVER)) {
-
-                        log.info("Silver");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            reContractbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            reContractvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            reContractotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            reContractallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
-                    } else if (discountMatrixRootObject.getInputData().getCondition() != null &&
-                            discountMatrixRootObject.getInputData().getCondition().equals(SAFRA)) {
-
-                        log.info("SAFRA");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            reContractbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            reContractvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            reContractotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            reContractallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                    } else if (discountMatrixRootObject.getInputData().getCondition() != null && (discountMatrixRootObject.getInputData().getCondition().equals(CORI)|| discountMatrixRootObject.getInputData().getCondition().equals(BUSINESS_SIM))) {
-
-                        log.info("CORI");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
-                            reContractbillPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(VAS)) {
-                            reContractvaspromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(OTHERS)) {
-                            reContractotherpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        } else if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(ALL_PRODUCT)) {
-                            reContractallpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-                    }
-
                 }
             }
         }
-        log.info(objectMapper.writeValueAsString(promotionalInfo));
+
         return promotionalInfo;
     }
 
