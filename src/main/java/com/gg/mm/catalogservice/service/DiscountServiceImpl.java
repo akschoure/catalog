@@ -57,21 +57,12 @@ public class DiscountServiceImpl implements DiscountService {
                     if (discountMatrixRootObject.getInputData().getCondition() != null &&
                             discountMatrixRootObject.getInputData().getCondition().equals(ALL_CUSTOMER)) {
                         log.info("All Customer Type");
-
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
                             billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
                     }
                     else if (discountMatrixRootObject.getInputData().getCondition() != null &&
                             discountMatrixRootObject.getInputData().getCondition().equals(SILVER)) {
                         log.info(SILVER);
-                        if (discountMatrixRootObject.getInputData().getProductType() != null
-                                && discountMatrixRootObject.getInputData().getProductType().equalsIgnoreCase(BILL_PLAN)) {
                             billPlanpromotionalProductTypeArrayList.add(createPromotionalProductType(discountMatrixRootObject));
-                        }
-
                     }
                 }
             }
@@ -91,30 +82,8 @@ public class DiscountServiceImpl implements DiscountService {
     }
 
 
-    private boolean isCommonConditionValid(DiscountMatrixRootObject discountMatrixRootObject) throws ParseException {
-
-        return
-                isDateConditionValid(discountMatrixRootObject)&& discountMatrixRootObject.getInputData().getOrderType() != null
-
-                && discountMatrixRootObject.getInputData().getChannel() != null
-                && (discountMatrixRootObject.getInputData().getChannel().contains("iBuy")
-               || discountMatrixRootObject.getInputData().getChannel().contains("-"));
-
-    }
-
-    private boolean isDateConditionValid(DiscountMatrixRootObject discountMatrixRootObject) throws ParseException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
-        Date currentDate  = new Date();
-        if(discountMatrixRootObject.getOutputData()!=null){
-            String promotionStartDateString = discountMatrixRootObject.getOutputData().getPromotionStartDate();
-            String promotionEndDateString = discountMatrixRootObject.getOutputData().getPromotionEndDate();
-            Date promotionStartDate = simpleDateFormat.parse(promotionStartDateString);
-            Date promotionEndDate = simpleDateFormat.parse(promotionEndDateString);
-            if(promotionEndDate != null && promotionStartDate != null && (currentDate.compareTo(promotionStartDate))>= 0 && (currentDate.compareTo(promotionEndDate)) <= 0){
-                return true;
-            }
-        }
-         return false;
+    private boolean isCommonConditionValid(DiscountMatrixRootObject discountMatrixRootObject) {
+        return discountMatrixRootObject.getInputData().getOrderType() != null;
     }
 
 
