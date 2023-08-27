@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="CatalogServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="ALTERNATIVE_JRE_PATH" value="Eclipse Temurin 17" />
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.CatalogServiceApplication" />
-    <module name="catalogservice" />
+    <module name="catalog" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.sg.m1.catalogservice.*" />

@@ -1,6 +1,4 @@
 
-u
-Esrc/main/java/com/gg/mm/catalogservice/CatalogServiceApplication.java,d\f\df5135051e9b26ac29f0bb5ccce157562c9c75ea
 „
 Tsrc/main/java/com/gg/mm/catalogservice/models/discount/DiscountMatrixRootObject.java,f\b\fb67934843778ceb1a99485ab543a08d8ae11026
 „

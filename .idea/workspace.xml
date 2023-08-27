@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="empty array scenario covered">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CatalogServiceApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/CatalogServiceApplication.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" afterDir="false" />
@@ -49,8 +52,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Git Repositories/Other Repos/catalog/pom.xml",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "D:/Learning/Unit Testing/Learn/catalog",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -81,18 +84,19 @@
       <command value="mvn clean verify sonar:sonar \   -Dsonar.projectKey=customerservice \   -Dsonar.projectName='customerservice' \   -Dsonar.host.url=http://localhost:9095 \   -Dsonar.token=sqp_f6872a32c1b2fb429f5063ff0ca52eebde6feee4" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray">
-    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="customerservice" />
+  <component name="RunManager" selected="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false">
+    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sg.m1.catalogservice.*" />
+          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sg.m1.customerservice" />
-      <option name="MAIN_CLASS_NAME" value="com.sg.m1.catalogservice.CustomerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
+      <option name="METHOD_NAME" value="createSimoDiscountInfo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,13 +117,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
+      <option name="METHOD_NAME" value="createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
+      <option name="METHOD_NAME" value="createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_False" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
+      <option name="METHOD_NAME" value="createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.CatalogServiceApplication" />
+      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo" />
+      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsFalse" />
+      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_False" />
+      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
       <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
-      <item itemvalue="JUnit.CustomerServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
+        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_False" />
+        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsFalse" />
+        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo" />
         <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
       </list>
     </recent_temporary>

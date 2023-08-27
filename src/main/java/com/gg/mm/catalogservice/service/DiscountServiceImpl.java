@@ -51,7 +51,7 @@ public class DiscountServiceImpl implements DiscountService {
 
             if (isCommonConditionValid(discountMatrixRootObject)) {
 
-                if ((discountMatrixRootObject.getInputData().getOrderType().equals( ALL_ORDER_TYPE) || discountMatrixRootObject.getInputData().getOrderType().contains(NEW_LINE))) {
+                if ((discountMatrixRootObject.getInputData().getOrderType().equals(ALL_ORDER_TYPE) || discountMatrixRootObject.getInputData().getOrderType().contains(NEW_LINE))) {
                     log.info(NEW_LINE);
 
                     if (discountMatrixRootObject.getInputData().getCondition() != null &&
@@ -67,7 +67,6 @@ public class DiscountServiceImpl implements DiscountService {
                 }
             }
         }
-
         return promotionalInfo;
     }
 
