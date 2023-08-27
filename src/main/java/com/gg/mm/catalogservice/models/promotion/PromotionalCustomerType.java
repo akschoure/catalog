@@ -13,6 +13,7 @@ import java.util.ArrayList;
 @Setter
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode
 public class PromotionalCustomerType implements Serializable {
 
     @JsonProperty("product_type_billplan")

@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Setter
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode
 public class PromotionalOrderType implements Serializable {
 
     @JsonProperty("customer_type_all")
