@@ -8,6 +8,7 @@ import com.gg.mm.catalogservice.models.promotion.PromotionalInfo;
 import com.gg.mm.catalogservice.models.promotion.PromotionalOrderType;
 import com.gg.mm.catalogservice.models.promotion.PromotionalProductType;
 import com.gg.mm.catalogservice.systeminterface.DiscountMatrixClient;
+import com.gg.mm.catalogservice.utils.OrderUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static com.gg.mm.catalogservice.constant.CatalogConstant.*;
-
+import static com.gg.mm.catalogservice.utils.OrderUtils.isCorrectOrderType;
 
 @Service
 @Transactional
@@ -51,7 +52,7 @@ public class DiscountServiceImpl implements DiscountService {
 
             if (isCommonConditionValid(discountMatrixRootObject)) {
 
-                if ((discountMatrixRootObject.getInputData().getOrderType().equals( ALL_ORDER_TYPE) || discountMatrixRootObject.getInputData().getOrderType().contains(NEW_LINE))) {
+                if (isCorrectOrderType(discountMatrixRootObject)) {
                     log.info(NEW_LINE);
 
                     if (discountMatrixRootObject.getInputData().getCondition() != null &&
@@ -70,7 +71,6 @@ public class DiscountServiceImpl implements DiscountService {
 
         return promotionalInfo;
     }
-
 
     private PromotionalProductType createPromotionalProductType(DiscountMatrixRootObject discountMatrixRootObject){
        var inputData =  discountMatrixRootObject.getInputData();

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="empty array scenario covered">
+    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="Setp 1 : Remove unwanted testcases">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/utils/OrderUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/utils/OrderUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalCustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalCustomerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalOrderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalOrderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/service/DiscountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gg/mm/catalogservice/service/DiscountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gg/mm/catalogservice/service/DiscountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gg/mm/catalogservice/service/DiscountServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gg/mm/catalogservice/service/DiscountServiceImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +71,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gg.mm.catalogservice.utils" />
       <recent name="com.gg.mm.catalogservice.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -84,7 +86,7 @@
       <command value="mvn clean verify sonar:sonar \   -Dsonar.projectKey=customerservice \   -Dsonar.projectName='customerservice' \   -Dsonar.host.url=http://localhost:9095 \   -Dsonar.token=sqp_f6872a32c1b2fb429f5063ff0ca52eebde6feee4" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DiscountServiceImplTest">
+  <component name="RunManager" selected="JUnit.OrderUtilsTest.testIsCorrectOrderType">
     <configuration name="DiscountServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="catalogservice" />
       <extension name="coverage">
@@ -96,54 +98,6 @@
       <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
       <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="catalogservice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
-      <option name="METHOD_NAME" value="createSimoDiscountInfo_EmptyArray" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="catalogservice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
-      <option name="METHOD_NAME" value="createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="catalogservice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gg.mm.catalogservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.service.DiscountServiceImplTest" />
-      <option name="METHOD_NAME" value="createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,21 +118,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.utils.OrderUtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderUtilsTest.testIsCorrectOrderType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.utils.OrderUtilsTest" />
+      <option name="METHOD_NAME" value="testIsCorrectOrderType(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderUtilsTest.testIsCorrectOrderType_AllOrderType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gg.mm.catalogservice.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gg.mm.catalogservice.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.gg.mm.catalogservice.utils.OrderUtilsTest" />
+      <option name="METHOD_NAME" value="testIsCorrectOrderType_AllOrderType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.CatalogServiceApplication" />
       <item itemvalue="JUnit.DiscountServiceImplTest" />
-      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
-      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true" />
       <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_true" />
-      <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
+      <item itemvalue="JUnit.OrderUtilsTest" />
+      <item itemvalue="JUnit.OrderUtilsTest.testIsCorrectOrderType" />
+      <item itemvalue="JUnit.OrderUtilsTest.testIsCorrectOrderType_AllOrderType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderUtilsTest.testIsCorrectOrderType" />
+        <item itemvalue="JUnit.OrderUtilsTest" />
+        <item itemvalue="JUnit.OrderUtilsTest.testIsCorrectOrderType_AllOrderType" />
         <item itemvalue="JUnit.DiscountServiceImplTest" />
         <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_true" />
-        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true" />
-        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false" />
-        <item itemvalue="JUnit.DiscountServiceImplTest.createSimoDiscountInfo_EmptyArray" />
       </list>
     </recent_temporary>
   </component>
@@ -199,23 +200,30 @@
       <option name="project" value="LOCAL" />
       <updated>1693061006590</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="all scenarios covered">
+      <option name="closed" value="true" />
+      <created>1693146075369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693146075369</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Setp 1 : Remove unwanted testcases">
+      <option name="closed" value="true" />
+      <created>1693146396466</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693146396466</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="empty array scenario covered" />
-    <option name="LAST_COMMIT_MESSAGE" value="empty array scenario covered" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="all scenarios covered" />
+    <MESSAGE value="Setp 1 : Remove unwanted testcases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setp 1 : Remove unwanted testcases" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/catalog$DiscountServiceImplTest_createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false.ic" NAME="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_false Coverage Results" MODIFIED="1693145056691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -224,10 +232,19 @@
     <SUITE FILE_PATH="coverage/catalog$DiscountServiceImplTest_createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true.ic" NAME="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_false_62_true Coverage Results" MODIFIED="1693145418200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.gg.mm.catalogservice.service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/catalog$OrderUtilsTest_testIsCorrectOrderType.ic" NAME="OrderUtilsTest.testIsCorrectOrderType Coverage Results" MODIFIED="1693147881057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gg.mm.catalogservice.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/catalog$OrderUtilsTest.ic" NAME="OrderUtilsTest Coverage Results" MODIFIED="1693147676347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gg.mm.catalogservice.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/catalog$OrderUtilsTest_testIsCorrectOrderType_AllOrderType.ic" NAME="OrderUtilsTest.testIsCorrectOrderType_AllOrderType Coverage Results" MODIFIED="1693147652996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gg.mm.catalogservice.utils.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/catalog$DiscountServiceImplTest_createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_true.ic" NAME="DiscountServiceImplTest.createSimoDiscountInfo_NonEmptyArray_isCommonConditionValid_ReturnsTrue_54_Returns_True_57_true Coverage Results" MODIFIED="1693145545410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.gg.mm.catalogservice.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/catalog$DiscountServiceImplTest.ic" NAME="DiscountServiceImplTest Coverage Results" MODIFIED="1693145555391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/catalog$DiscountServiceImplTest.ic" NAME="DiscountServiceImplTest Coverage Results" MODIFIED="1693146211303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.gg.mm.catalogservice.service.*</FILTER>
     </SUITE>
   </component>
