@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="empty array scenario covered">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalCustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalCustomerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalOrderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalOrderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gg/mm/catalogservice/models/promotion/PromotionalProductType.java" afterDir="false" />
+    <list default="true" id="c5630a94-d747-48cc-b5e8-7377451d490b" name="Changes" comment="all scenarios covered">
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gg/mm/catalogservice/service/DiscountServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,12 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693061006590</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="all scenarios covered">
+      <option name="closed" value="true" />
+      <created>1693146075369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693146075369</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="empty array scenario covered" />
-    <option name="LAST_COMMIT_MESSAGE" value="empty array scenario covered" />
+    <MESSAGE value="all scenarios covered" />
+    <option name="LAST_COMMIT_MESSAGE" value="all scenarios covered" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
